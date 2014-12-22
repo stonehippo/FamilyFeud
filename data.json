@@ -1,0 +1,27 @@
+{
+	"boards": [
+		{
+			"topic": "Superpowers",
+			"answers": [
+				{"answer": "Invisibility", "percentage": 35},
+				{"answer": "Flight", "percentage": 25},
+				{"answer": "Super Strength", "percentage": 18},
+				{"answer": "X-Ray/Laser Vision", "percentage": 15},
+				{"answer": "Super Speed", "percentage": 7}
+			]
+		},
+		{
+			"topic": "Sports",
+			"answers": [
+				{"answer": "Football", "percentage": 23},
+				{"answer": "Baseball", "percentage": 17},
+				{"answer": "Soccer", "percentage": 15},
+				{"answer": "Handball", "percentage": 14},
+				{"answer": "Rugby", "percentage": 13},
+				{"answer": "Cricket", "percentage": 11},
+				{"answer": "Ultimate Frisbee", "percentage": 5},
+				{"answer": "Hockey", "percentage": 2}
+			]
+		}
+	]
+}
