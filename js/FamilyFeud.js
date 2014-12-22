@@ -6,7 +6,7 @@ var FamilyFeud = (function () {
 	var that = {},
 		boards = [],
 		rounds = 0,
-		currentBoard = 0;
+		currentBoard = 0,
 		getBoards = function () {
 			return boards;
 		},
