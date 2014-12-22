@@ -28,7 +28,7 @@ var FamilyFeud = (function () {
 				if (item) {
 					cell = ["<td class='answer'>",item.answer,"</td><td class='percentage'>",item.percentage,"</td>"].join("");
 				} else {
-					cell="<td span='2'></td>";
+					cell="<td colspan='2'></td>";
 				}
 
 				if (index < 4) { // the item to the first column
