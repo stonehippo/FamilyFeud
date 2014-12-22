@@ -16,8 +16,34 @@ var FamilyFeud = (function () {
 		drawBoard = function (board) {
 			if (typeof board.played === 'undefined') {
 				board.played = false;
+				fillboard(board);
 			}
-			$(["<div class='board'>",board.topic,"</div>"].join("")).appendTo("body");
+			$("<div class='board'></div>").appendTo("body");
+			$(["<h1>",board.topic,"</h1>"].join("")).appendTo(".board");
+
+			// draw the answers for the board
+			$("<table><thead></thead><tbody></tbody></table>").appendTo(".board");
+			$.each(board.answers, function (index, item) {
+				var cell;
+				if (item) {
+					cell = ["<td class='answer'>",item.answer,"</td><td class='percentage'>",item.percentage,"</td>"].join("");
+				} else {
+					cell="<td span='2'></td>";
+				}
+
+				if (index < 4) { // the item to the first column
+					$(["<tr></tr>"].join("")).appendTo('.board table tbody');
+					$('.board table tbody tr').last().append(cell);
+				}  else {		
+					$(cell).appendTo(['.board table tbody tr:nth-child(', index - 3,')'].join(""));
+				}
+			});
+		},
+		fillboard = function (board) {
+			// there are less than 8 answers in the board, add in filler items
+			while (board.answers.length < 8) {
+				board.answers.push(null);
+			}
 		},
 		dismissCurrentBoard = function () {
 			$('.board').remove();
