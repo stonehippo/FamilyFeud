@@ -64,6 +64,8 @@ var FamilyFeud = (function () {
 		},
 		start = function () {
 			drawBoard(boards[currentBoard]);
+			$("#next").on('click', function() {that.nextBoard();});
+			$("#previous").on('click', function() {that.previousBoard();});
 		};
 
 	// load the data for the game
