@@ -4,7 +4,7 @@ table {width: 100%; border-collapse: separate; border: 4px solid black;}
 table tr {padding: .2em; border: 4px solid white;}
 table td {border: 4px solid black; padding: .5em; text-align: center; color: #fff; margin: 0em;}
 .answer {width: 42%; background-color: #000; background-size: 4px 4px; background-image:repeating-linear-gradient(0deg, rgba(255,255,255,0.25), rgba(255,255,255,0.25) 1px, transparent 1px, transparent 4px),repeating-linear-gradient(-90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.25), transparent 1px, transparent 4px);}
-.percentage {width: 8%; background-color: #f00; background-size: 4px 4px; background-image:repeating-linear-gradient(0deg, rgba(255,255,255,0.25), rgba(255,255,255,0.25) 1px, transparent 1px, transparent 4px),repeating-linear-gradient(-90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.25), transparent 1px, transparent 4px);}
+.percentage {width: 8%; background-color: #f00; background-size: 4px 4px; background-image:repeating-linear-gradient(0deg, rgba(33,33,33,0.25), rgba(33,33,33,0.25) 1px, transparent 1px, transparent 4px),repeating-linear-gradient(-90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.25), transparent 1px, transparent 4px);}
 .strikes {display: inline-block;width: 50%; text-align: right; font-size: 1.5em; color: black; -webkit-text-fill-color: white; -webkit-text-stroke: 1px black; }
 .strikes .struck {color: red;-webkit-text-fill-color: red;}
 h1 {display: inline-block; width: 50%;}
