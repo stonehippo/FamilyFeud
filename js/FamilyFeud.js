@@ -14,11 +14,10 @@ var FamilyFeud = (function () {
 			return rounds;
 		},
 		drawBoard = function (board) {
-			var body = $('body');
 			if (typeof board.played === 'undefined') {
 				board.played = false;
 			}
-			body.append(["<div class='board'>",board.topic,"</div>"].join(""));	
+			$(["<div class='board'>",board.topic,"</div>"].join("")).appendTo("body");
 		},
 		dismissCurrentBoard = function () {
 			$('.board').remove();
