@@ -36,7 +36,7 @@ var FamilyFeud = (function () {
 				if (index < 4) { // the item to the first column
 					$(["<tr></tr>"].join("")).appendTo('.board table tbody');
 					$('.board table tbody tr').last().append(cell);
-				}  else {		
+				}  else {
 					$(cell).appendTo(['.board table tbody tr:nth-child(', index - 3,')'].join(""));
 				}
 			});
