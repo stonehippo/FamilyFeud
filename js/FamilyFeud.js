@@ -16,10 +16,12 @@ var FamilyFeud = (function () {
 		drawBoard = function (board) {
 			if (typeof board.played === 'undefined') {
 				board.played = false;
+				board.strikes = 0;
 				fillboard(board);
 			}
 			$("<div class='board'></div>").appendTo("body");
 			$(["<h1>",board.topic,"</h1>"].join("")).appendTo(".board");
+			$("<div class='strikes'><span>X</span><span>X</span><span>X</span></div>").appendTo(".board");
 
 			// draw the answers for the board
 			$("<table><thead></thead><tbody></tbody></table>").appendTo(".board");
@@ -38,6 +40,8 @@ var FamilyFeud = (function () {
 					$(cell).appendTo(['.board table tbody tr:nth-child(', index - 3,')'].join(""));
 				}
 			});
+			$(".board").on('click', function () {strikeBoard(boards[currentBoard]);});
+			updateStrikeCount(board);
 		},
 		fillboard = function (board) {
 			// there are less than 8 answers in the board, add in filler items
@@ -45,7 +49,25 @@ var FamilyFeud = (function () {
 				board.answers.push(null);
 			}
 		},
+		strikeBoard = function (board) {
+			if (board.strikes < 3) {
+				board.strikes++;
+				flashStrikes(board);
+				updateStrikeCount(board);
+			}
+		},
+		flashStrikes = function (board) {
+			console.log("You know have", board.strikes, "strikes!");
+		},
+		updateStrikeCount = function (board) {
+			$('.strikes span').each(function (index, item) {
+				if (index < (board.strikes)) {
+					$(item).addClass("struck");
+				}
+			});
+		},
 		dismissCurrentBoard = function () {
+			$(".board").off();
 			$('.board').remove();
 		},
 		nextBoard = function () {
@@ -64,8 +86,8 @@ var FamilyFeud = (function () {
 		},
 		start = function () {
 			drawBoard(boards[currentBoard]);
-			$("#next").on('click', function() {that.nextBoard();});
-			$("#previous").on('click', function() {that.previousBoard();});
+			$("#next").on('click', function () {that.nextBoard();});
+			$("#previous").on('click', function () {that.previousBoard();});
 		};
 
 	// load the data for the game
