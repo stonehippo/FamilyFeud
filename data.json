@@ -22,6 +22,17 @@
 				{"answer": "Ultimate Frisbee", "percentage": 5},
 				{"answer": "Hockey", "percentage": 2}
 			]
-		}
+		},
+        {
+            "topic": "Most Popular Planets",
+            "answers": [
+                {"answer": "Uranus", "percentage": 27},
+                {"answer": "Mercury", "percentage": 20},
+                {"answer": "Mars", "percentage": 15},
+                {"answer": "Jupiter", "percentage": 14},
+                {"answer": "Saturn", "percentage": 13},
+                {"answer": "Venus", "percentage": 11}
+            ]
+        }
 	]
 }
